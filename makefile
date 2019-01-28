@@ -11,10 +11,10 @@ Hello: Hello.so
 testfile:
 	clang++-6.0 -emit-llvm -c test.cpp -o test.bc
 
-run: Hello testfile
+runFunctionPassOnTestFile: Hello testfile
 	opt-6.0 -load ./Hello.so -Hello < test.bc > /dev/null
 
-run2: Hello testfile
+runModulePassOnTestfile: Hello testfile
 	opt-6.0 -load ./Hello.so -Hello2 < test.bc > /dev/null
 
 clean:
