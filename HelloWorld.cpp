@@ -21,7 +21,10 @@ namespace {
     static char ID;
     Hello2() : llvm::ModulePass{ID} {}
     bool runOnModule(llvm::Module &M) override {
-      llvm::errs() << "Hello ", llvm::errs().write_escaped(M.getName()) << "\n";
+      llvm::errs() << "Name of the module ", llvm::errs().write_escaped(M.getName()) << "\n";
+      for(auto iter = M.getFunctionList().begin(); iter != M.getFunctionList().end(); ++iter) {
+	llvm::errs() << "Function name:" << iter->getName() << "\n";
+      }
       return false;
     }
     
