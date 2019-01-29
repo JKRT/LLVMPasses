@@ -7,3 +7,5 @@ LLVM version 6:
 TODO 
 
 Provide configurations for other versions of LLVM.
+
+Currently only 6.0 is supported
