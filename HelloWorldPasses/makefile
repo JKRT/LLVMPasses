@@ -1,6 +1,5 @@
 LLVM_VERSION=
 LLVM_INCLUDEDIR = `llvm-config-6.0 --includedir`
-test = foobarfoo
 LLVM_FLAGS = `llvm-config-6.0 --cxxflags --ldflags --system-libs --libs all`
 CXX = clang++-6.0
 CXXFLAGS = -g -std=c++11 -O3 -I $(LLVM_INCLUDEDIR) -I $(LLVM_INCLUDEDIR)

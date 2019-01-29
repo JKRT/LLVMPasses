@@ -19,7 +19,9 @@ namespace {
 
   struct Hello2 : public llvm::ModulePass {
     static char ID;
+
     Hello2() : llvm::ModulePass{ID} {}
+    
     bool runOnModule(llvm::Module &M) override {
       llvm::errs() << "Name of the module ", llvm::errs().write_escaped(M.getName()) << "\n";
       for(auto iter = M.getFunctionList().begin(); iter != M.getFunctionList().end(); ++iter) {
