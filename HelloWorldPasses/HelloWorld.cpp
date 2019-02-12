@@ -14,7 +14,6 @@ namespace {
       llvm::errs().write_escaped(F.getName()) << "\n";
       return false;
     }
-    
   };
 
   struct Hello2 : public llvm::ModulePass {
@@ -29,9 +28,7 @@ namespace {
       }
       return false;
     }
-    
   };
-  
 }
 
 char Hello::ID = 0;
