@@ -1,11 +1,12 @@
 # LLVMPasses
-Simple trivial example on how to run an LLVM module and LLVM function pass
+Simple trivial example on how to run an LLVM module and LLVM function pass using LLVM 6.
 
-Requirments:
-LLVM version 6:
+Run by executing 
 
-TODO 
+make runFunctionPassOnTestFile
 
-Provide configurations for other versions of LLVM.
+Or 
 
-Currently only 6.0 is supported
+make runModulePassOnTestfile
+
+LLVM 6.0 and it's dependencies are needed for this to work.
